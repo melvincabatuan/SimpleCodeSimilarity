@@ -48,10 +48,10 @@ public class Main {
         //        printTokens(words1);
         String[] words2 = programB.split(" +");
         //        printTokens(words2);
-
+        int minLength = words1.length < words2.length ? words1.length : words2.length;
         // Count value similarity
         int count = 0;
-        for (int i=0; i<words1.length; i++) {
+        for (int i=0; i<minLength; i++) {
             if(words1[i].equals(words2[i])){
                 count++;
             }
